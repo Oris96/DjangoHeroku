@@ -1,3 +1,10 @@
 numbers = input().split(' ')
-result = [1 for i in range(1, len(numbers)) if eval(numbers[i]) > eval(numbers[i-1])]
-print(len(result))
+
+for i in range(int(len(numbers) / 2)):
+    numbers.append(numbers.pop(1))
+    numbers.append(numbers.pop(0))
+
+if len(numbers) % 2:
+    numbers.append(numbers.pop(0))
+
+print(' '.join(numbers))
