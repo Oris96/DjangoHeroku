@@ -1,1 +1,1 @@
-print(*input().rpartition(' ')[::-2])
+print(len(set(input().split(' '))))
