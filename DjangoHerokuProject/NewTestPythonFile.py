@@ -1,14 +1,13 @@
-rows = int(input())
-numbers = [int(input()) for i in range(rows)]
-composition = int(input())
-result = 'НЕТ'
+timur = input()
+ruslan = input()
 
-while len(numbers) > 1:
-    comps = [numbers[0] * i for i in numbers[1:]]
-    if composition in comps:
-        result = 'ДА'
-        break
-    else:
-        numbers.pop(0)
-
-print(result)
+results = {"ножницыбумага": "Тимур",
+           "каменьножницы": "Тимур",
+           "бумагакамень": "Тимур",
+           "бумага" * 2: "ничья",
+           "камень" * 2: "ничья",
+           "ножницы" * 2: "ничья"}
+try:
+    print(results[timur + ruslan])
+except:
+    print("Руслан")
