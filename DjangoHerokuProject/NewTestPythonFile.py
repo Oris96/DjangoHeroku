@@ -1,13 +1,6 @@
-timur = input()
-ruslan = input()
+timur, ruslan = input(), input()
 
-results = {"ножницыбумага": "Тимур",
-           "каменьножницы": "Тимур",
-           "бумагакамень": "Тимур",
-           "бумага" * 2: "ничья",
-           "камень" * 2: "ничья",
-           "ножницы" * 2: "ничья"}
-try:
-    print(results[timur + ruslan])
-except:
-    print("Руслан")
+figure = ['ножницы', 'бумага', 'камень', 'ящерица', 'Спок']
+winner = ['ничья', 'Руслан', 'Тимур', 'Руслан', 'Тимур']
+
+print(winner[figure.index(timur) - figure.index(ruslan)])
