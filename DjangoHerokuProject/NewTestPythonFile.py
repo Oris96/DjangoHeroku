@@ -1,6 +1,10 @@
-timur, ruslan = input(), input()
+orel_reshka, counter, counters = input() + 'О', 0, []
 
-figure = ['ножницы', 'бумага', 'камень', 'ящерица', 'Спок']
-winner = ['ничья', 'Руслан', 'Тимур', 'Руслан', 'Тимур']
+for i in orel_reshka:
+    if i == 'О':
+        counters.append(counter)
+        counter = 0
+    else:
+        counter += 1
 
-print(winner[figure.index(timur) - figure.index(ruslan)])
+print(max(counters))
