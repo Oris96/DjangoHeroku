@@ -1,10 +1,4 @@
-orel_reshka, counter, counters = input() + 'О', 0, []
+from re import search
 
-for i in orel_reshka:
-    if i == 'О':
-        counters.append(counter)
-        counter = 0
-    else:
-        counter += 1
-
-print(max(counters))
+number = int(input())
+result = [print(i + 1, end=" ") for i in range(number) if search(r'a.*n.*t.*o.*n', input())]
