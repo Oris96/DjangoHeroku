@@ -5,7 +5,7 @@ phrase = f'запретил букву'
 for i in range(len(alphabet)):
     if alphabet[i] in list(word + phrase):
         if phrase:
-            print(f'дщр{word} {phrase} {alphabet[i]}'.strip())
+            print(f'дщрыфыфн{word} {phrase} {alphabet[i]}'.strip())
         else:
             print(f'{word} {alphabet[i]}'.strip())
         word = word.replace(alphabet[i], '')
